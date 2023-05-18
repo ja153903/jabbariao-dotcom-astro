@@ -1,0 +1,39 @@
+---
+import Layout from "./Layout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title} customColor="#153450" customSize="1.5rem">
+  <div class="post-layout">
+    <p class="post-title-url">{frontmatter.title}</p>
+    <p class="post-date">
+      {frontmatter.date} • {frontmatter.approxTimeSpentReading} min read
+    </p>
+    <slot />
+  </div>
+</Layout>
+
+<style>
+  .post-layout {
+    margin-top: 5px;
+  }
+  .post {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .post-date {
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .post-title-url {
+    color: #000;
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0;
+  }
+</style>

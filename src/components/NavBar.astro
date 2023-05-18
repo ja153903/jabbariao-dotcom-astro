@@ -1,0 +1,20 @@
+---
+export interface Props {
+  customColor?: string;
+  customSize?: string;
+}
+
+const { customColor = "#000", customSize = "2.5rem" } = Astro.props;
+---
+
+<a class="title" href="/">Oh Yeah</a>
+
+<style define:vars={{ customColor, customSize }}>
+  .title {
+    color: var(--customColor);
+    font-size: var(--customSize);
+    font-weight: 900;
+    padding: 1.5rem 0;
+    text-decoration: underline;
+  }
+</style>
