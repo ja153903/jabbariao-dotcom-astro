@@ -2,12 +2,15 @@
 import NavBar from "../components/NavBar.astro";
 
 export interface Props {
-  customSize?: string;
-  customColor?: string;
+  NavBarProps?: {
+    customSize?: string;
+    customColor?: string;
+  };
   title: string;
 }
 
-const { title, customColor = "#000", customSize = "2.5rem" } = Astro.props;
+const { title, NavBarProps } = Astro.props;
+const { customColor = "#000", customSize = "2.5rem" } = NavBarProps || {};
 ---
 
 <!DOCTYPE html>
@@ -44,7 +47,7 @@ const { title, customColor = "#000", customSize = "2.5rem" } = Astro.props;
       padding: 0 25vw;
     }
 
-    @media (max-width: 400px) {
+    @media (max-width: 450px) {
       padding: 0 10vw;
     }
   }

@@ -2,9 +2,10 @@
 import Layout from "./Layout.astro";
 
 const { frontmatter } = Astro.props;
+const NavBarProps = { customColor: "#153450", customSize: "1.5rem" };
 ---
 
-<Layout title={frontmatter.title} customColor="#153450" customSize="1.5rem">
+<Layout title={frontmatter.title} NavBarProps={NavBarProps}>
   <div class="post-layout">
     <p class="post-title-url">{frontmatter.title}</p>
     <p class="post-date">
