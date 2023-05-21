@@ -2,7 +2,7 @@
 layout: ../../layouts/PostLayout.astro
 title: Setting up a JS/TS projects with ESLint, Prettier, and Husky
 description: DX at its finest
-date: May 17, 2023
+date: 2023-05-17
 slug: eslint-config-prettier
 approxTimeSpentReading: 2
 ---
