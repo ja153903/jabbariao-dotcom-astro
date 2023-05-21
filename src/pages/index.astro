@@ -1,4 +1,5 @@
 ---
+import format from "date-fns/format";
 import { getCollection } from "astro:content";
 
 import Layout from "../layouts/Layout.astro";
@@ -28,7 +29,8 @@ posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
                 {post.data.title}
               </a>
               <p class="post-date">
-                {post.data.date} • {post.data.approxTimeSpentReading} min read
+                {format(post.data.date, "MMM d, y")} •{" "}
+                {post.data.approxTimeSpentReading} min read
               </p>
               <p class="post-description">{post.data.description}</p>
             </li>
