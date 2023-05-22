@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/PostLayout.astro
-title: Setting up a JS/TS projects with ESLint, Prettier, and Husky
+title: Setting up ESLint, Prettier, and Husky
 description: DX at its finest
 date: 2023-05-17
 slug: eslint-config-prettier
