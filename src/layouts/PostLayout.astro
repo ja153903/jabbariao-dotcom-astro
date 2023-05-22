@@ -11,7 +11,7 @@ const formattedDate = format(new Date(frontmatter.date), "MMM d, y");
   <div class="post-layout">
     <p class="post-title-url">{frontmatter.title}</p>
     <p class="post-date">
-      {formattedDate} • {frontmatter.approxTimeSpentReading} min read
+      {formattedDate} • {frontmatter.minutesRead}
     </p>
     <slot />
   </div>

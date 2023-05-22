@@ -4,7 +4,6 @@ title: Writing efficient reduce functions in JavaScript
 description: A simple best practice to pick up
 date: 2023-05-20
 slug: reduce-with-mutation
-approxTimeSpentReading: 1
 ---
 
 When I first started using the spread operator in JavaScript,

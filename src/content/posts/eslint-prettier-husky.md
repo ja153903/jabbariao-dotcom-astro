@@ -4,7 +4,6 @@ title: Setting up a JS/TS projects with ESLint, Prettier, and Husky
 description: DX at its finest
 date: 2023-05-17
 slug: eslint-config-prettier
-approxTimeSpentReading: 2
 ---
 
 Whenever I start a JavaScript/TypeScript project, one of the first things I set up are various devtools that
