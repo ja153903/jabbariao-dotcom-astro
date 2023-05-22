@@ -1,11 +1,11 @@
-<button id="scroll-to-top" hidden>
+<button id="scroll-to-top" type="button" hidden>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="15"
     height="15"
     viewBox="0 0 256 256"
     ><path
-      fill="currentColor"
+      fill="#000"
       d="M216.49 168.49a12 12 0 0 1-17 0L128 97l-71.51 71.49a12 12 0 0 1-17-17l80-80a12 12 0 0 1 17 0l80 80a12 12 0 0 1 0 17Z"
     ></path></svg
   >
@@ -31,12 +31,22 @@
 <style>
   #scroll-to-top {
     position: fixed;
-    top: 90vh;
-    left: 90vw;
+    top: 95%;
+    left: 95%;
     width: 35px;
     height: 35px;
+    border: none;
     border-radius: 50%;
+    cursor: pointer;
     z-index: 100;
     text-align: center;
+
+    @media (max-width: 768px) {
+      left: 90%;
+    }
+
+    &:hover {
+      opacity: 60%;
+    }
   }
 </style>
