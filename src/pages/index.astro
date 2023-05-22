@@ -1,9 +1,9 @@
 ---
 import { format } from "date-fns";
+import getReadingTime from "reading-time";
 import { getCollection } from "astro:content";
 
 import Layout from "../layouts/Layout.astro";
-import { getPostReadingTime } from "../utils/remark-reading-time.mjs";
 
 const posts = await getCollection("posts");
 posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
@@ -31,7 +31,7 @@ posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
               </a>
               <p class="post-date">
                 {format(post.data.date, "MMM d, y")} •{" "}
-                {getPostReadingTime(post.body).text}
+                {getReadingTime(post.body).text}
               </p>
               <p class="post-description">{post.data.description}</p>
             </li>
