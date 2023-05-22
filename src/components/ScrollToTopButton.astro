@@ -1,0 +1,40 @@
+<button id="scroll-to-top" hidden>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="15"
+    height="15"
+    viewBox="0 0 256 256"
+    ><path
+      fill="currentColor"
+      d="M216.49 168.49a12 12 0 0 1-17 0L128 97l-71.51 71.49a12 12 0 0 1-17-17l80-80a12 12 0 0 1 17 0l80 80a12 12 0 0 1 0 17Z"
+    ></path></svg
+  >
+</button>
+
+<script>
+  const scrollToTopButton = document.getElementById("scroll-to-top");
+  if (scrollToTopButton) {
+    document.addEventListener("scroll", () => {
+      scrollToTopButton.hidden = document.documentElement.scrollTop === 0;
+    });
+
+    scrollToTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    });
+  }
+</script>
+
+<style>
+  #scroll-to-top {
+    position: fixed;
+    top: 90vh;
+    left: 90vw;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+</style>

@@ -1,5 +1,6 @@
 ---
 import NavBar from "../components/NavBar.astro";
+import ScrollToTopButton from "../components/ScrollToTopButton.astro";
 
 export interface Props {
   NavBarProps?: {
@@ -25,6 +26,7 @@ const { customColor = "#000", customSize = "2.5rem" } = NavBarProps || {};
   <body>
     <NavBar customColor={customColor} customSize={customSize} />
     <slot />
+    <ScrollToTopButton />
   </body>
 </html>
 <style is:global>
