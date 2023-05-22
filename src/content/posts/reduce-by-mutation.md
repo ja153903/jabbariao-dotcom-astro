@@ -27,7 +27,8 @@ const someReducedArr = arr.reduce((acc, item) => {
 Notice that every time our predicate function evaluates to `TRUE`, we return a new object that
 spreads the existing accumulator into a new object with our new item.
 
-This _can_ become a problem because we're creating a new object every time.
+This _can_ become a problem because we're creating a new object every time and for a large array, this can
+become expensive.
 
 To solve this problem, we can write our reduce like so:
 
