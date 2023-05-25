@@ -90,6 +90,11 @@ Promise.prototype.all = function (promises) {
   const result = new Array(numPromises);
   let unresolved = numPromises;
 
+  if (unresolved === 0) {
+    resolve(result);
+    return;
+  }
+
   return new Promise((resolve, reject) => {
     promises.forEach(async (promise, index) => {
       try {
