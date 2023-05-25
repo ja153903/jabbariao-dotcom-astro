@@ -56,7 +56,8 @@ Promise.prototype.all = function (promises) {
 };
 ```
 
-Since we're returning a Promise, we want to make sure our return value is a Promise.
+Since we're returning a Promise, we want to make sure our return value is a Promise. We should also move all the variables we created
+previously into the Promise callback.
 
 ```js
 /**
@@ -64,11 +65,11 @@ Since we're returning a Promise, we want to make sure our return value is a Prom
  * @returns {Promise}
  */
 Promise.prototype.all = function (promises) {
-  const numPromises = promises.length;
-  const result = new Array(numPromises);
-  let unresolved = numPromises;
-
-  return new Promise((resolve, reject) => {});
+  return new Promise((resolve, reject) => {
+    const numPromises = promises.length;
+    const result = new Array(numPromises);
+    let unresolved = numPromises;
+  });
 };
 ```
 
@@ -86,16 +87,16 @@ If any of our promises are rejected, then we should call `reject` with some erro
  * @returns {Promise}
  */
 Promise.prototype.all = function (promises) {
-  const numPromises = promises.length;
-  const result = new Array(numPromises);
-  let unresolved = numPromises;
-
-  if (unresolved === 0) {
-    resolve(result);
-    return;
-  }
-
   return new Promise((resolve, reject) => {
+    const numPromises = promises.length;
+    const result = new Array(numPromises);
+    let unresolved = numPromises;
+
+    if (unresolved === 0) {
+      resolve(result);
+      return;
+    }
+
     promises.forEach(async (promise, index) => {
       try {
         const value = await promise;
