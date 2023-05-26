@@ -19,7 +19,7 @@ One of the Promise methods that I want to go through today is `Promise.all()`.
 as a result that resolves to be an array of fulfillment values if we successfully fulfilled **all** the promises.
 Otherwise, we reject if any of the promises are rejected.
 
-## Thoughtprocess
+## My approach
 
 Let's create a function stub to start.
 
@@ -108,7 +108,7 @@ Promise.prototype.all = function (promises) {
           resolve(result);
         }
       } catch (err) {
-        reject("Could not resolve all promises");
+        reject(err);
       }
     });
   });
