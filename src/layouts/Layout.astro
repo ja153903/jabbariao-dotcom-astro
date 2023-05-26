@@ -1,6 +1,7 @@
 ---
 import "@fontsource-variable/montserrat";
 import "@fontsource/ibm-plex-mono";
+
 import NavBar from "../components/NavBar.astro";
 import ScrollToTopButton from "../components/ScrollToTopButton.astro";
 
@@ -43,6 +44,7 @@ const { customColor = "#000", customSize = "2.5rem" } = NavBarProps || {};
       white 60%
     );
   }
+
   body {
     font-family: Montserrat Variable, sans-serif;
     display: flex;
@@ -65,10 +67,12 @@ const { customColor = "#000", customSize = "2.5rem" } = NavBarProps || {};
   html {
     background-color: #f4d6bc;
   }
+
   pre {
     padding: 1rem;
     border-radius: 5px;
   }
+
   code {
     font-family: IBM Plex Mono, Menlo, Monaco, Lucida Console, Liberation Mono,
       DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
