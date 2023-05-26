@@ -47,13 +47,14 @@ const { customColor = "#000", customSize = "2.5rem" } = NavBarProps || {};
     font-family: Montserrat Variable, sans-serif;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     padding: 0 25dvw;
 
-    @media only screen and (max-width: 1250px) {
+    @media screen and (max-width: 1250px) {
       padding: 0 15dvw;
     }
 
-    @media only screen and (max-width: 450px) {
+    @media screen and (max-width: 450px) {
       padding: 0 5dvw;
     }
   }
