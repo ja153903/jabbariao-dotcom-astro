@@ -20,7 +20,7 @@ const { customColor = "#000", customSize = "2.5rem" } = NavBarProps || {};
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -47,7 +47,6 @@ const { customColor = "#000", customSize = "2.5rem" } = NavBarProps || {};
     font-family: Montserrat Variable, sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     padding: 0 25dvw;
 
     @media screen and (max-width: 1250px) {
