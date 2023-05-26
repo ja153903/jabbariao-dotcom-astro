@@ -6,8 +6,10 @@ date: 2023-05-25
 slug: impl-promise-all
 ---
 
-When interviewing for front-end engineers, one of the questions I like to ask or be asked
-involves implementing Promise methods.
+In the vast trivia-like world of front-end interviewing, one of the questions I like to ask or be asked
+involves implementing Promise methods. These questions require a person to actual show if they understand
+how JavaScript handles asynchronous tasks with Promises which I do think is a fundamental skill when
+working with JavaScript.
 
 One of the Promise methods that I want to go through today is `Promise.all()`.
 
