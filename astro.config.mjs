@@ -9,7 +9,6 @@ export default defineConfig({
     shikiConfig: {
       theme: "rose-pine-moon",
       langs: ["js", "ts", "tsx", "jsx", "bash", "css", "json"],
-      wrap: true,
     },
   },
 });

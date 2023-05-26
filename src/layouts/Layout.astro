@@ -48,15 +48,20 @@ const { customColor = "#000", customSize = "2.5rem" } = NavBarProps || {};
     display: flex;
     flex-direction: column;
     padding: 0 25dvw;
+  }
 
-    @media screen and (max-width: 1250px) {
+  @media (max-width: 1250px) {
+    body {
       padding: 0 15dvw;
     }
+  }
 
-    @media screen and (max-width: 450px) {
+  @media (max-width: 450px) {
+    body {
       padding: 0 5dvw;
     }
   }
+
   html {
     background-color: #f4d6bc;
   }
