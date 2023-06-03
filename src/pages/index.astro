@@ -49,19 +49,6 @@ posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
     justify-content: flex-start;
   }
 
-  .github-link {
-    color: #153450;
-    font-weight: 500;
-    text-decoration: underline;
-    &:hover {
-      text-decoration: none;
-    }
-  }
-
-  .posts {
-    padding-top: 20px;
-  }
-
   p {
     color: #000;
     font-size: 1rem;
@@ -70,17 +57,18 @@ posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
     margin: 0;
   }
 
-  .posts {
-    display: flex;
-    flex-direction: column;
-  }
-
   ul {
     list-style-type: none;
     padding: 0;
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
+  }
+
+  .posts {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
   }
 
   .post {
@@ -107,5 +95,14 @@ posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
     font-size: 2rem;
     font-weight: 800;
     text-decoration: none;
+  }
+
+  .github-link {
+    color: #153450;
+    font-weight: 500;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
   }
 </style>
