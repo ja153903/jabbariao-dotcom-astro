@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/PostLayout.astro
 title: Debounce in JavaScript
-description: The Fizz-Buzz of front-end interview questions
+description: The Fizz Buzz of frontend interview questions
 date: 2023-06-02
 slug: debounce-js
 ---
