@@ -2,7 +2,11 @@
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("posts");
+  const isDev = import.meta.env.DEV;
+  const posts = await getCollection(
+    "posts",
+    ({ data }) => !data.draft || isDev
+  );
 
   return posts.map((post) => ({
     params: {
