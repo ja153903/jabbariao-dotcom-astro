@@ -2,6 +2,8 @@
 ---
 
 <script>
+  // TODO: Definitely should think about improving on this style-wise later
+  // NOTE: Found this code at: https://jordemort.dev/blog/adding-copy-buttons-to-code-blocks/
   const codeBlocks = document.querySelectorAll("pre");
 
   codeBlocks.forEach((block) => {
@@ -12,12 +14,14 @@
       let button = (
         document.getElementById("copyButtonTemplate") as HTMLTemplateElement
       ).content.firstElementChild;
-      button = button.cloneNode(true) as HTMLButtonElement;
-      button.addEventListener("click", makeCopier(block));
-
-      div.appendChild(button);
-      // block.appendChild(div);
-      block.parentNode.insertBefore(div, block);
+      if (button !== null) {
+        button = button.cloneNode(true) as HTMLButtonElement;
+        button.addEventListener("click", makeCopier(block));
+        div.appendChild(button);
+        if (block?.parentNode) {
+          block.parentNode.insertBefore(div, block);
+        }
+      }
     }
   });
 
@@ -25,7 +29,9 @@
     let code = block.querySelector("code");
 
     async function copier() {
-      await navigator.clipboard.writeText(code.innerText);
+      if (code) {
+        await navigator.clipboard.writeText(code.innerText);
+      }
     }
 
     return copier;
