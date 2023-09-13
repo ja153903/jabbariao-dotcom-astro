@@ -4,6 +4,7 @@ import "@fontsource-variable/jetbrains-mono";
 
 import NavBar from "../components/NavBar.astro";
 import ScrollToTopButton from "../components/ScrollToTopButton.astro";
+import CopyToClipboardButton from "../components/CopyToClipboardButton.astro";
 
 export interface Props {
   NavBarProps?: {
@@ -29,6 +30,7 @@ const { customColor = "#000", customSize = "2.5rem" } = NavBarProps || {};
   </head>
   <body>
     <NavBar customColor={customColor} customSize={customSize} />
+    <CopyToClipboardButton />
     <slot />
     <footer>
       <ScrollToTopButton />
