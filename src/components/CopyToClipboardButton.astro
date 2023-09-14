@@ -21,16 +21,15 @@
         button.addEventListener("click", makeCopier(block));
 
         const svg = button.querySelector("svg");
+        let timeoutId: number;
 
         svg?.addEventListener("click", () => {
-          let timeoutId: number;
+          clearTimeout(timeoutId);
 
           svg.innerHTML = copiedSvg;
           timeoutId = setTimeout(() => {
             svg.innerHTML = defaultCopySvg;
           }, 500);
-
-          return () => clearTimeout(timeoutId);
         });
 
         div.appendChild(button);
