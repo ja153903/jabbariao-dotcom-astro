@@ -23,13 +23,15 @@
         const svg = button.querySelector("svg");
         let timeoutId: number;
 
-        svg?.addEventListener("click", () => {
+        button.addEventListener("click", () => {
           clearTimeout(timeoutId);
 
-          svg.innerHTML = copiedSvg;
-          timeoutId = setTimeout(() => {
-            svg.innerHTML = defaultCopySvg;
-          }, 500);
+          if (svg !== null) {
+            svg.innerHTML = copiedSvg;
+            timeoutId = setTimeout(() => {
+              svg.innerHTML = defaultCopySvg;
+            }, 500);
+          }
         });
 
         div.appendChild(button);
@@ -73,7 +75,7 @@
 
   .code-buttons button {
     position: absolute;
-    padding: 5px;
+    padding: 2px;
     top: 0.5rem;
     right: 0.5rem;
     z-index: 100;
@@ -82,7 +84,7 @@
     background-color: #153450;
     color: #f4d6bc;
     transition: all 0.2s;
-    opacity: 0.2;
+    opacity: 0.5;
     cursor: pointer;
   }
 
