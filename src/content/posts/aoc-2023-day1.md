@@ -22,16 +22,11 @@ between real and test data.
 
 ```python
 class Solution(BaseSolution):
-    def __init__(self, is_test: bool = False):
-        super().__init__(YEAR, DAY, should_read_file=True, is_test=is_test)
+    def __init__(self, year: int, day: int, is_test: bool = False):
+        super().__init__(year, day, should_read_file=True, is_test=is_test)
 
     def part1(self) -> int:
-        lines = self.data
-        digits = [self.extract_digits_for_part1(line) for line in lines]
-
-        assert len(digits) == len(lines)
-
-        return sum(digits)
+        return sum(self.extract_digits_for_part1(line) for line in self.data)
 
     def extract_digits_for_part1(self, line: str) -> int:
         left, right = 0, len(line) - 1
@@ -47,8 +42,6 @@ class Solution(BaseSolution):
 ```
 
 To solve part 1, I simply used a two-pointer approach to find the first and last digits. Then, I found the sum of all such two-digit numbers.
-There could have been a couple more optimizations to be made here such as using generator expressions rather than creating a list, but
-I wanted to do some sanity checks with the number of elements. 
 
 Part 2 made it a little more involved by also allowing the written representation of a digit to count towards our two-digit number. This means that
 strings such as *one*, *two*, *three*, etc. would also count as digits.
@@ -61,12 +54,7 @@ class Solution(BaseSolution):
     # ...Ignoring previous part
 
     def part2(self) -> int:
-        lines = self.data
-        digits = [self.extract_digits_for_part2(line) for line in lines]
-
-        assert len(digits) == len(lines)
-
-        return sum(digits)
+        return sum(self.extract_digits_for_part2(line) for line in self.data)
 
     def extract_digits_for_part2(self, line: str) -> int:
         digit_indices = [(i, int(val)) for i, val in enumerate(line) if val.isdigit()]
