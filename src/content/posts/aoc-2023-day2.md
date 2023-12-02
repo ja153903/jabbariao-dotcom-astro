@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/PostLayout.astro
 title: Advent of Code 2023 - Day 2 - Python
-description: Solving Day 1 with Python
+description: Solving Day 2 with Python
 date: 2023-12-02
 slug: aoc-2023-day2
 ---
