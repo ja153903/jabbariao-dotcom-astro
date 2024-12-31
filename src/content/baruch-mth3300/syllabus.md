@@ -1,7 +1,3 @@
-# MTH 3300 Spring 2025
-
-## Algorithms, Computers, and Programming I
-
 ### Course Overview
 
 This course is designed to provide undergraduate students with a solid foundation in programming using Python.
