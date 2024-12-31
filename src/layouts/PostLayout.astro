@@ -3,11 +3,10 @@ import { format } from "date-fns";
 import Layout from "./Layout.astro";
 
 const { frontmatter } = Astro.props;
-const NavBarProps = { customColor: "#153450", customSize: "1.5rem" };
 const formattedDate = format(new Date(frontmatter.date), "MMM d, y");
 ---
 
-<Layout title={frontmatter.title} NavBarProps={NavBarProps}>
+<Layout title={frontmatter.title}>
   <div class="post-layout">
     <p class="post-title-url">{frontmatter.title}</p>
     <p class="post-date">

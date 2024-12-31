@@ -1,0 +1,41 @@
+---
+import Layout from "./Layout.astro";
+
+const { title, year } = Astro.props;
+---
+
+<Layout title={title}>
+  <div class="post-layout">
+    <div class="links">
+      <strong>Course links:</strong>
+      <a href=`/baruch-mth3300/${year}/problem-sets`> Problem Sets</a>
+      <a href=`/baruch-mth3300/${year}/lecture-notebooks`>Lecture Notebooks</a>
+      <a href=`/baruch-mth3300/${year}/environment-setup`>Environment setup</a>
+    </div>
+    <slot />
+  </div>
+</Layout>
+
+<style>
+  .post-layout {
+    margin-top: 5px;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+
+    padding-bottom: 10px;
+
+    & > a {
+      color: #153450;
+      font-weight: 500;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+</style>

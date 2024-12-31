@@ -30,6 +30,12 @@ const { customColor = "#000", customSize = "2.5rem" } = NavBarProps || {};
   </head>
   <body>
     <NavBar customColor={customColor} customSize={customSize} />
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/baruch-mth3300/spr2025"
+        >Baruch College - MTH 3300 (Spring 2025)</a
+      >
+    </div>
     <CopyToClipboardButton />
     <slot />
     <footer>
@@ -80,5 +86,22 @@ const { customColor = "#000", customSize = "2.5rem" } = NavBarProps || {};
     font-family: JetBrains Mono Variable, Menlo, Monaco, Lucida Console,
       Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
       monospace;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+
+    padding-bottom: 10px;
+
+    & > a {
+      color: #153450;
+      font-weight: 500;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 </style>
