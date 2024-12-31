@@ -5,7 +5,7 @@ const { title, year } = Astro.props;
 ---
 
 <Layout title={title}>
-  <div class="post-layout">
+  <div class="layout-child">
     <h2>{title}</h2>
     <div class="links">
       <strong>Course links:</strong>
@@ -18,8 +18,8 @@ const { title, year } = Astro.props;
 </Layout>
 
 <style>
-  .post-layout {
-    margin-top: 5px;
+  .layout-child {
+    margin-top: -10px;
   }
 
   .links {
